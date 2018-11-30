@@ -1,7 +1,7 @@
 {
   "name": "basic-express-server",
   "version": "1.0.0",
-  "description": "",
+  "description": "This is a basic Express app that uses Handlebars as the template engine.",
   "main": "index.js",
   "scripts": {
     "test": "jest --coverage --verbose"

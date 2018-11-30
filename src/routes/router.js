@@ -1,21 +1,14 @@
 import express from 'express';
+import content from '../content/content.json';
 
 const router = express.Router();
 
-let sendJSON = (res, data) => {
-  res.statusCode = 200;
-  res.statusMessage = 'OK';
-  res.setHeader('Content-Type', 'application/json');
-  res.write(JSON.stringify(data));
-  res.end();
-};
-
 router.get('/', (req, res, next) => {
-  res.send('Hello!');
+  res.send('Server Home!');
 });
 
-router.post('/save', (req, res, next) => {
-  sendJSON(res, req.body);
+router.get('/content', (req, res, next) => {
+  res.send(content);
 });
 
 export default router;
