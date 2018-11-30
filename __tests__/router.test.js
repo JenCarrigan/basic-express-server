@@ -19,7 +19,8 @@ describe('Basic Express Server Tests', () => {
   });
 
   it('should return 200 if sending valid JSON', async () => {
-    const response = await myTester.post('/save').send({name: 'Bob'});
+    const response = await myTester.get('/content');
     expect(response.statusCode).toBe(200);
+    expect(response.body.length).toBe(2);
   });
 });

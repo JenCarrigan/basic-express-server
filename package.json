@@ -4,7 +4,8 @@
   "description": "This is a basic Express app that uses Handlebars as the template engine.",
   "main": "index.js",
   "scripts": {
-    "test": "jest --coverage --verbose"
+    "test": "jest --coverage --verbose",
+    "lint": "eslint '**/*.js'"
   },
   "repository": {
     "type": "git",
