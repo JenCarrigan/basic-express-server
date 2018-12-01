@@ -7,7 +7,7 @@ let isRunning = false;
 const handlebars = require('express-handlebars').create({defaultLayout:'main'});
 
 app.engine('handlebars', handlebars.engine);
-app.use(cors());
+app.use(cors()); 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(router);
