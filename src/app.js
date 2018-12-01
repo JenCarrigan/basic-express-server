@@ -1,11 +1,13 @@
 import express from 'express';
 import router from './routes/router.js';
+import cors from 'cors';
 const app = express();
 let isRunning = false;
 
 const handlebars = require('express-handlebars').create({defaultLayout:'main'});
 
 app.engine('handlebars', handlebars.engine);
+app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(router);
